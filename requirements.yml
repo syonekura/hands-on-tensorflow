@@ -1,0 +1,12 @@
+name: tf
+channels:
+  - defaults
+dependencies:
+  - numpy=1.14.2
+  - pandas=0.22.0
+  - pip=10.0.1
+  - python=3.6.5
+  - scikit-learn=0.19.1
+  - pip:
+    - tensorboard==1.8.0
+    - tensorflow-gpu==1.8.0
