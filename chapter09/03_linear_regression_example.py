@@ -40,7 +40,7 @@ def main():
     y = tf.placeholder(tf.float32, shape=(None, 1), name='y')
     theta = tf.Variable(tf.random_uniform([n + 1, 1], -1.0, 1.0), name='theta')
     y_pred = tf.matmul(X, theta, name='prediction')
-    with tf.name_scope('loss') as scope:
+    with tf.name_scope('loss'):
         error = y_pred - y
         mse = tf.reduce_mean(tf.square(error), name='mse')
     optimizer = tf.train.GradientDescentOptimizer(learning_rate=learning_rate)
